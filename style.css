@@ -1,0 +1,103 @@
+/* Importação de fonte básica do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* Reset Básico para melhor consistência entre navegadores */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f9; /* Fundo cinza claro */
+    color: #333;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto; /* Centraliza o conteúdo */
+}
+
+/* --- Cabeçalho (Header) --- */
+header {
+    background-color: #007bff; /* Azul vibrante */
+    color: white;
+    padding: 1rem 0;
+    border-bottom: 5px solid #0056b3;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 1.8rem;
+}
+
+/* --- Navegação (Nav) --- */
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #0056b3;
+    border-radius: 5px;
+}
+
+/* --- Seção Hero (Destaque Principal) --- */
+.hero {
+    background: #e9ecef; /* Fundo cinza suave */
+    text-align: center;
+    padding: 4rem 0;
+    margin-bottom: 2rem;
+}
+
+.hero h2 {
+    font-size: 2.5rem;
+    color: #007bff;
+    margin-bottom: 1rem;
+}
+
+.btn-principal {
+    display: inline-block;
+    background-color: #28a745; /* Botão verde */
+    color: white;
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 1.5rem;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.btn-principal:hover {
+    background-color: #1e7e34;
+}
+
+/* --- Seções de Conteúdo --- */
+.content-section {
+    padding: 2rem 0;
+    border-bottom: 1px solid #ddd;
+}
+
+/* --- Rodapé (Footer) --- */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 2rem;
+}
