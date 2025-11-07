@@ -3,48 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carrinho Seguidor de Linha com Arduino</title>
-    <link rel="stylesheet" href="css/style.css">
-    <script defer src="js/script.js"></script>
+    <title>Line Follower - Carrinho Seguidor de Linha</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&family=Montserrat:wght=400;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <header>
-        <div class="container">
-            <h1>🤖 Seguidor de Linha IR</h1>
-            <nav>
-                <ul>
-                    <li><a href="#home">Início</a></li>
-                    <li><a href="#componentes">Componentes</a></li>
-                    <li><a href="#montagem">Montagem</a></li>
-                    <li><a href="#programacao">Programação</a></li>
-                </ul>
-            </nav>
-        </div>
+    <header class="main-header">
+        <div class="logo">LineFollower</div>
+        <nav>
+            <ul>
+                <li><a href="#projeto">Projeto</a></li>
+                <li><a href="#componentes">Componentes</a></li>
+                <li><a href="#codigo">Código</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <main>
-        <section id="home" class="hero">
-            <div class="container">
-                <h2>Crie Seu Próprio Robô!</h2>
-                <p>Aprenda o passo a passo completo para construir um carrinho seguidor de linha usando Arduino Uno, sensores infravermelhos e o Motor Shield L293D.</p>
-                <a href="#componentes" class="btn-principal">Comece Pelo Material Necessário</a>
+    <section id="hero" class="hero-section">
+        <h1>O Futuro da Automação em Minha Mão</h1>
+        <p>Conheça o nosso **Carrinho Seguidor de Linha** - precisão e robótica.</p>
+        <button id="cta-button" class="cta-button">Ver Demonstração</button>
+    </section>
+
+    <section id="projeto" class="content-section">
+        <h2>🚀 Detalhes do Projeto</h2>
+        <div class="card-grid">
+            <div class="card">
+                <h3>Visão</h3>
+                <p>O robô usa sensores infravermelhos para identificar a linha preta em um fundo branco.</p>
             </div>
-        </section>
-
-        <section id="componentes" class="content-section">
-            <div class="container">
-                <h3>🛠️ Lista de Componentes</h3>
-                </div>
-        </section>
-
-        </main>
-
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 Projeto Robótica.</p>
+            <div class="card">
+                <h3>Ação</h3>
+                <p>Microcontrolador processa os dados e envia comandos de velocidade para os motores.</p>
+            </div>
+            <div class="card">
+                <h3>Precisão</h3>
+                <p>Algoritmos de controle (PID, por exemplo) garantem um trajeto suave e rápido.</p>
+            </div>
         </div>
+    </section>
+
+    <section id="componentes" class="content-section dark-bg">
+        <h2>🛠️ Componentes Principais</h2>
+        </section>
+    
+    <footer class="main-footer">
+        <p>&copy; 2025 LineFollower Project</p>
     </footer>
 
+    <script src="script.js"></script>
 </body>
 </html>
