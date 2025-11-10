@@ -3,56 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Detalhes - Carrinho Seguidor de Linha</title>
-    <link rel="stylesheet" href="style.css"> 
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&family=Montserrat:wght=400;700&display=swap" rel="stylesheet">
+    <title>Rover 4WD | Seguidor de Linha Futurista</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-    <header class="main-header">
-        <div class="logo">LineFollower</div>
+    <header class="cyber-header">
+        <div class="logo">
+            <span class="glitch">ROVER 4WD</span>
+        </div>
         <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li> 
-                <li><a href="#especificacoes">Especificações</a></li>
-                <li><a href="#galeria">Galeria</a></li>
-            </ul>
+            <a href="#sobre">Sobre</a>
+            <a href="#especificacoes">Specs</a>
+            <a href="#codigo">Código</a>
+            <a href="#contato">Contato</a>
         </nav>
     </header>
 
-    <section id="main-details" class="hero-section" style="min-height: 50vh;">
-        <h1>Detalhes Aprofundados do Carrinho</h1>
-        <p>Toda a engenharia, componentes e o código por trás da precisão do Line Follower.</p>
+    <main>
+        <section id="hero" class="hero-section">
+            <h1>Projeto **CYBER-TRACKER** 🤖</h1>
+            <p class="subtitle">O Seguidor de Linha 4x4 do Futuro</p>
+            <button id="cta-button" class="cta-button">Ver Demonstração</button>
         </section>
 
-    <section id="especificacoes" class="content-section">
-        <h2>🔬 Especificações Técnicas</h2>
-        <div class="specs-grid">
+        <section id="sobre" class="content-section">
+            <h2>✨ Sobre o Carrinho</h2>
             <div class="card">
-                <h3>Microcontrolador</h3>
-                <p>Arduino Uno R3 (ou outro)</p>
+                <p>Desenvolvido para máxima **precisão** e **tração**, o Rover 4WD utiliza múltiplos sensores IR para seguir a linha com eficiência superior. Seu chassi robusto e tração integral garantem performance em qualquer superfície.</p>
             </div>
-            <div class="card">
-                <h3>Sensores</h3>
-                <p>Módulo de 5 (ou mais) sensores infravermelhos TCRT5000.</p>
-            </div>
-            <div class="card">
-                <h3>Chassi</h3>
-                <p>Chassi em acrílico cortado a laser, leve e modular.</p>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="galeria" class="content-section dark-bg">
-        <h2>📸 Galeria de Fotos e Vídeos</h2>
-        <div class="image-placeholder">[Imagem do Carrinho em Ação]</div>
-        <div class="image-placeholder">[Vídeo da Demonstração]</div>
-    </section>
+        <section id="especificacoes" class="content-section">
+            <h2>⚙️ Especificações Técnicas</h2>
+            <div class="specs-grid">
+                <div class="spec-item">4 Motores DC</div>
+                <div class="spec-item">Sistema 4WD</div>
+                <div class="spec-item">5 Sensores IR</div>
+                <div class="spec-item">Chassi Modular</div>
+            </div>
+        </section>
+    </main>
 
-    <footer class="main-footer">
-        <p>&copy; 2025 LineFollower Project</p>
+    <footer class="cyber-footer">
+        <p>&copy; 2025 Laboratório de Robótica. // Acesso de Nível 3 // </p>
     </footer>
 
-    </body>
+    <script src="script.js"></script>
+</body>
 </html>
-
