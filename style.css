@@ -1,14 +1,24 @@
-/* Importação de uma fonte futurista */
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+/* Importação de fonte moderna e limpa */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap');
 
-/* Variáveis para fácil personalização */
+/* Variáveis para um estilo mais neutro e flexível */
 :root {
-    --fundo-principal: #0a0a0f;
-    --texto-principal: #e0e0e0;
-    --cor-neon: #00ffcc; /* Ciano Neon */
-    --cor-acento: #ff3366; /* Rosa/Magenta */
-    --borda-fina: 1px solid rgba(0, 255, 204, 0.2);
+    --fundo-principal: #ffffff; /* Fundo claro e limpo */
+    --texto-principal: #1f1f1f;
+    --cor-destaque: #007bff; /* Azul vibrante e corporativo */
+    --cor-acento-clara: #f8f9fa; /* Cinza muito claro */
+    --borda-fina: 1px solid #dee2e6;
 }
+
+/* Modo Escuro Opcional (aplica-se a todo o body) */
+/*
+.dark-mode {
+    --fundo-principal: #1f1f1f;
+    --texto-principal: #ffffff;
+    --cor-acento-clara: #343a40;
+    --borda-fina: 1px solid #495057;
+}
+*/
 
 * {
     margin: 0;
@@ -17,92 +27,94 @@
 }
 
 body {
-    font-family: 'Orbitron', sans-serif;
+    font-family: 'Inter', sans-serif;
     background-color: var(--fundo-principal);
     color: var(--texto-principal);
     line-height: 1.6;
+    transition: background-color 0.3s, color 0.3s; /* Transição suave para dark mode */
 }
 
 /* --- Cabeçalho e Navegação --- */
-.cyber-header {
+.header-moderno {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px 5%;
     border-bottom: var(--borda-fina);
-    background-color: rgba(10, 10, 15, 0.9);
-    backdrop-filter: blur(5px); /* Efeito de vidro futurista */
+    background-color: var(--fundo-principal);
     position: sticky;
     top: 0;
     z-index: 1000;
 }
 
-.logo .glitch {
-    font-size: 1.8em;
+.logo span {
+    font-size: 1.4em;
     font-weight: 700;
-    color: var(--cor-neon);
-    text-shadow: 0 0 10px var(--cor-neon), 0 0 20px var(--cor-neon);
+    color: var(--texto-principal);
+    text-transform: uppercase;
 }
 
 nav a {
     color: var(--texto-principal);
     text-decoration: none;
     margin-left: 25px;
-    font-size: 0.9em;
-    transition: color 0.3s, text-shadow 0.3s;
+    font-size: 0.95em;
+    padding: 5px 0;
+    transition: color 0.3s, border-bottom 0.3s;
 }
 
 nav a:hover {
-    color: var(--cor-neon);
-    text-shadow: 0 0 8px var(--cor-neon);
+    color: var(--cor-destaque);
+    border-bottom: 2px solid var(--cor-destaque);
 }
 
 /* --- Seção Hero (Destaque) --- */
 .hero-section {
-    height: 80vh;
+    height: 70vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.8)), url('') center/cover no-repeat;
+    background-color: var(--cor-acento-clara); /* Fundo sutilmente cinza */
+    padding: 5%;
 }
 
 .hero-section h1 {
-    font-size: 3.5em;
-    color: var(--cor-acento);
-    text-shadow: 0 0 10px var(--cor-acento), 0 0 20px rgba(255, 51, 102, 0.5);
+    font-size: 3em;
+    color: var(--texto-principal);
     margin-bottom: 10px;
+    font-weight: 700;
 }
 
 .hero-section .subtitle {
-    font-size: 1.2em;
-    color: var(--cor-neon);
-    margin-bottom: 40px;
+    font-size: 1.1em;
+    color: #6c757d; /* Cinza médio */
+    margin-bottom: 30px;
+    max-width: 700px;
 }
 
 .cta-button {
-    background-color: var(--cor-neon);
-    color: var(--fundo-principal);
+    background-color: var(--cor-destaque);
+    color: white;
     border: none;
-    padding: 15px 30px;
-    font-family: 'Orbitron', sans-serif;
+    padding: 12px 30px;
+    font-family: 'Inter', sans-serif;
     font-weight: 700;
     text-transform: uppercase;
     cursor: pointer;
-    box-shadow: 0 0 15px var(--cor-neon);
-    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.2s;
 }
 
 .cta-button:hover {
-    background-color: var(--texto-principal);
-    transform: scale(1.05);
-    box-shadow: 0 0 25px var(--cor-neon);
+    background-color: #0056b3; /* Tom mais escuro do azul */
+    transform: translateY(-1px);
 }
 
 /* --- Seções de Conteúdo --- */
 main {
-    padding: 50px 5%;
+    padding: 60px 5%;
 }
 
 .content-section {
@@ -113,47 +125,46 @@ main {
 .content-section h2 {
     font-size: 2em;
     margin-bottom: 30px;
-    color: var(--cor-acento);
-    border-left: 4px solid var(--cor-neon);
+    color: var(--texto-principal);
+    border-left: 5px solid var(--cor-destaque); /* Linha de destaque simples */
     padding-left: 15px;
 }
 
 .card {
-    background-color: rgba(255, 255, 255, 0.05); /* Fundo semi-transparente */
-    padding: 30px;
-    border-radius: 5px;
-    border: 1px solid rgba(0, 255, 204, 0.1);
-    box-shadow: 0 0 20px rgba(0, 255, 204, 0.1);
+    background-color: var(--fundo-principal);
+    padding: 25px;
+    border-radius: 8px; /* Cantos levemente arredondados para modernidade */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05); /* Sombra sutil */
+    border: 1px solid var(--cor-acento-clara);
 }
 
 /* --- Especificações em Grid --- */
 .specs-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 20px;
 }
 
 .spec-item {
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: var(--cor-acento-clara);
     padding: 20px;
     text-align: center;
-    border: 2px solid var(--cor-neon);
-    color: var(--cor-neon);
-    font-weight: 700;
-    box-shadow: 0 0 10px rgba(0, 255, 204, 0.5);
-    transition: transform 0.2s;
+    border-radius: 5px;
+    font-weight: 400;
+    transition: background-color 0.3s;
 }
 
 .spec-item:hover {
-    transform: translateY(-5px);
-    background-color: rgba(0, 255, 204, 0.1);
+    background-color: var(--cor-destaque);
+    color: white;
 }
 
 /* --- Rodapé --- */
-.cyber-footer {
+.footer-moderno {
     text-align: center;
     padding: 20px;
-    font-size: 0.8em;
-    color: var(--cor-neon);
+    font-size: 0.9em;
+    color: #6c757d;
     border-top: var(--borda-fina);
+    background-color: var(--cor-acento-clara);
 }
